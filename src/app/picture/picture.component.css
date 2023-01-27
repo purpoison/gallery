@@ -1,0 +1,19 @@
+.example-card {
+    background-color: #fff;
+  }
+  .container{
+    margin: 0 auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .image{
+    padding: 10px;
+  }
+  .mat-mdc-card-title{
+    text-align: center;
+  }
+  .mat-mdc-raised-button.mat-primary {
+    width: 100%;
+  }
