@@ -1,15 +1,23 @@
 .example-card {
     background-color: #fff;
+    flex: 0 0 20%;
+    justify-content: space-between;
+    min-height: 400px;
+    padding: 5px;
   }
   .container{
+    padding: 20px;
     margin: 0 auto 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
   }
   .image{
-    padding: 10px;
+    max-width: 232px;
+    max-height: 180px;
+    margin: 0 auto;
   }
   .mat-mdc-card-title{
     text-align: center;

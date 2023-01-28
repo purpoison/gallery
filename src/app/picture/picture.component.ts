@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { Productservice } from './PicturesService';
+import { PicturesService } from './PicturesService';
+import { Picture } from './pictures';
 @Component({
   selector: 'app-picture',
   templateUrl: './picture.component.html',
-  styleUrls: ['./picture.component.css']
+  styleUrls: ['./picture.component.css'],
+  providers: [PicturesService]
 })
 export class PictureComponent {
-  pictures:Productservice[]
-  constructor(private picteresService: Productservice){
-    this.pictures = picteresService.getPicture()
+  pictures:Picture[];
+  
+  constructor(private picteresService: PicturesService){
+    this.pictures = picteresService.getPicture();
   }
 }

@@ -1,11 +1,11 @@
   <div class="container">
-    <mat-card class="example-card">
-      <mat-card-title>Враження. Схід сонця</mat-card-title>
-      <img class="image" src="../../assets/pictures/387541@2x.jpg" alt="sunrice">
+    <mat-card class="example-card" *ngFor="let picture of pictures">
+      <mat-card-title>{{picture.name}}</mat-card-title>
+      <img class="image" src="{{picture.img}}" alt="sunrice">
       <mat-card-content>
-          <p>Створена у: 1872 році</p>
-          <p>Розміри:	48×63 см</p>
-          <p>Місцезнаходження:	Музей Мармоттан-Моне (Париж,Франція)</p>
+          <p>Створена у: {{picture.year}} році</p>
+          <p>Розміри:	{{picture.size}}</p>
+          <p>Місцезнаходження: {{picture.location}}</p>
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button color="primary">Детальніше</button>
