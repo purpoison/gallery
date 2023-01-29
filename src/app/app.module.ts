@@ -12,6 +12,7 @@ import { PictureComponent } from './picture/picture.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { PicturePageComponent } from './picture-page/picture-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
     GalleryComponent,
     HeaderComponent,
     FooterComponent,
-    PictureComponent
+    PictureComponent,
+    PicturePageComponent
   ],
   imports: [
     BrowserModule,

@@ -9,8 +9,8 @@ import { Picture } from './pictures';
 })
 export class PictureComponent {
   pictures:Picture[];
-  
-  constructor(private picteresService: PicturesService){
-    this.pictures = picteresService.getPicture();
+
+  constructor(private picturesService: PicturesService){
+    this.pictures = picturesService.getPicture();
   }
 }
