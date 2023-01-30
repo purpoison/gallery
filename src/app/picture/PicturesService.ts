@@ -8,7 +8,7 @@ import { Picture } from "./pictures";
 export class PicturesService{
   constructor(){}
 
-    private pictures:Picture[] = [
+    public pictures:Picture[] = [
         {
         id:1,
         img: '../../assets/pictures/387541@2x.jpg',
@@ -59,7 +59,11 @@ export class PicturesService{
       }
 
     ]
-    getPicture():Picture[]{
+    public getPicture():Picture[]{
       return this.pictures;
     }
+    public getById(id:number){
+      return this.pictures[id-1];
+    }
+
 }

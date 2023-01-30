@@ -1,1 +1,14 @@
-<p>picture-page works!</p>
+<div class="container">
+    <p>picture-page works! {{temp.name}}</p>
+<mat-card class="example-card color">
+    <mat-card-header>
+      <mat-card-title>{{temp.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{temp.img}}" alt="{{temp.name}}">
+    <mat-card-content>
+        <p>Створена у: {{temp.year}} році</p>
+        <p>Розміри:	{{temp.size}}</p>
+        <p>Місцезнаходження: {{temp.location}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
