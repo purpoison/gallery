@@ -1,19 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { PicturesService } from '../picture/PicturesService';
 import { Picture } from "../picture/pictures";
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { getLocalePluralCase } from '@angular/common';
 
+// @Injectable({
+//   providedIn: 'root'
+// })
 @Component({
   selector: 'app-picture-page',
   templateUrl: './picture-page.component.html',
   styleUrls: ['./picture-page.component.css'],
   providers: [PicturesService]
 })
-export class PicturePageComponent {
+export class PicturePageComponent  implements OnInit{
   pictureInfo:Picture[]
+  pictureSubs!: Subscription;
   temp:any
-
-  constructor(private picturesService: PicturesService){
+  id: any;
+  private querySubscription: Subscription;
+  constructor(private route: ActivatedRoute, private picturesService: PicturesService){
+    this.querySubscription = route.queryParams.subscribe(
+      (queryParam: any) => {
+          this.id = queryParam['id'];
+          console.log(this.id);   
+      }
+  );
     this.pictureInfo = picturesService.getPicture();
-    this.temp = this.picturesService.getById(1);
+    this.temp = this.picturesService.getById(this.id);
   }
+  // constructor(private picturesService: PicturesService){
+  //   this.pictureInfo = picturesService.getPicture();
+  //   this.temp = this.picturesService.getById(1);
+  // }
+  // constructor(private route: ActivatedRoute){
+
+  // }
+  ngOnInit(): void {
+    // this.pictureSubs = this.picturesService.getPic().subscribe((data) =>{
+    //   this.pictureInfo = data
+    // })
+  }
+
+  // this.route.params.subscribe((param) => {
+  //   this.id = +param.get('id');
+  //   this.picturesService.testGetIdFromComponent(this.id);
+  // })
+
 }

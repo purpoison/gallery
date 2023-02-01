@@ -1,12 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Picture } from "./pictures";
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PicturesService{
-  constructor(){}
+  // url:string = 'http://localhost:4200/picture/'
+  constructor(private http: HttpClient ){}
 
     public pictures:Picture[] = [
         {
@@ -57,7 +59,6 @@ export class PicturesService{
         size: '89 × 130 см',
         location: 'Музей Орсе (Париж)'
       }
-
     ]
     public getPicture():Picture[]{
       return this.pictures;
@@ -65,5 +66,7 @@ export class PicturesService{
     public getById(id:number){
       return this.pictures[id-1];
     }
-
+    // getPict(id:number){
+    //   return this.http.get<Picture>(this.url)
+    // }
 }

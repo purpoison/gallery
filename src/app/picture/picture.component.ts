@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { PicturesService } from './PicturesService';
 import { Picture } from './pictures';
+import { PicturePageComponent } from '../picture-page/picture-page.component';
+
 @Component({
   selector: 'app-picture',
   templateUrl: './picture.component.html',
@@ -8,8 +10,8 @@ import { Picture } from './pictures';
   providers: [PicturesService]
 })
 export class PictureComponent {
+  id:any;
   pictures:Picture[];
-
   constructor(private picturesService: PicturesService){
     this.pictures = picturesService.getPicture();
   }

@@ -1,5 +1,4 @@
-<div class="container">
-    <p>picture-page works! {{temp.name}}</p>
+<div class="container" *ngIf="temp">
 <mat-card class="example-card color">
     <mat-card-header>
       <mat-card-title>{{temp.name}}</mat-card-title>
@@ -12,3 +11,4 @@
     </mat-card-content>
   </mat-card>
 </div>
+  <p>Hellooo {{id}} !!</p>

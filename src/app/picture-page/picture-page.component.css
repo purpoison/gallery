@@ -1,3 +1,10 @@
 .color{
     background-color: #fff;
+    text-align: center;
+}
+.container{
+    padding: 20px;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: center;
 }
