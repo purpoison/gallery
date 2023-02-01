@@ -8,3 +8,6 @@
     display: flex;
     justify-content: center;
 }
+.color img{
+    max-height: 475px;
+}
