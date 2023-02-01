@@ -13,8 +13,4 @@ export class PictureResolver  implements Resolve<Picture > {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Picture | Observable<Picture> | Promise<Picture> {
         throw new Error('Method not implemented.');
     }
-    // constructor(private picturesService: PicturesService){}
-    // resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Picture> {
-    //      return this.picturesService.getById(route.params?.['id'])
-    // }
 }

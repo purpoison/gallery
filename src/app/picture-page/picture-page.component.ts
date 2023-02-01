@@ -31,22 +31,8 @@ export class PicturePageComponent  implements OnInit{
     this.pictureInfo = picturesService.getPicture();
     this.temp = this.picturesService.getById(this.id);
   }
-  // constructor(private picturesService: PicturesService){
-  //   this.pictureInfo = picturesService.getPicture();
-  //   this.temp = this.picturesService.getById(1);
-  // }
-  // constructor(private route: ActivatedRoute){
 
-  // }
   ngOnInit(): void {
-    // this.pictureSubs = this.picturesService.getPic().subscribe((data) =>{
-    //   this.pictureInfo = data
-    // })
+
   }
-
-  // this.route.params.subscribe((param) => {
-  //   this.id = +param.get('id');
-  //   this.picturesService.testGetIdFromComponent(this.id);
-  // })
-
 }

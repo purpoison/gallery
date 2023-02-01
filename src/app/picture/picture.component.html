@@ -9,6 +9,7 @@
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button color="primary" [routerLink]="['picture']" [queryParams]="{id: picture.id}">Детальніше</button>
+          <button (click)="routingPicture(picture.id)">Test</button>
         </mat-card-actions>
       </mat-card>
   </div>
